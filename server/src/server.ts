@@ -1,5 +1,4 @@
-import { configDotenv } from "dotenv";
-configDotenv({ path: ".env.local" });
+import "./config/env.js";
 
 import app from "./app.js";
 

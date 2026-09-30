@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import "./config/env.js";
 
 import { errorHandler } from "./middleware/error.middleware.js";
 
@@ -11,6 +12,8 @@ import skillRouter from "./features/skills/skill.router.js";
 import certRouter from "./features/certification/cert.routes.js";
 import authRouter from "./features/auth/auth.routes.js";
 const app = express();
+
+console.log("CLIENT_URL:", process.env.CLIENT_URL);
 
 app.use(
   cors({
